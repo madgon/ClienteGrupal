@@ -32,7 +32,7 @@ public class Cliente {
 		areaLTI.setNombre("LTI");
 		try {
 			areasBean.crear(areaLTI);
-			System.out.println("Se creó exitosamente el area");
+			System.out.println("Se creï¿½ exitosamente el area");
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -41,7 +41,7 @@ public class Cliente {
 		areaBiomedicas.setNombre("Biomedicas");
 		try {
 			areasBean.crear(areaBiomedicas);
-			System.out.println("Se creó exitosamente el area");
+			System.out.println("Se creï¿½ exitosamente el area");
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -50,7 +50,7 @@ public class Cliente {
 		areaIAgro.setNombre("IAgro");
 		try {
 			areasBean.crear(areaIAgro);
-			System.out.println("Se creó exitosamente el area");
+			System.out.println("Se creï¿½ exitosamente el area");
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -67,25 +67,74 @@ public class Cliente {
 		
 		
 		// Creo el Material placa Arduino
-		// TODO
+		placaArduino.setNombre("Placa Arduino");
+		placaArduino.setDescripcion("Placa con microcontrolador programable");
+		try {
+			materialesBean.crear(placaArduino);
+			System.out.println("Se creï¿½ exitosamente el material "+ placaArduino.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material impresora 3D
-		// TODO
+		impresora3D.setNombre("Impresora 3D");
+		impresora3D.setDescripcion("Impresora capaz de imprimir modelos de tres dimensiones");
+		try {
+			materialesBean.crear(impresora3D);
+			System.out.println("Se creï¿½ exitosamente el material "+ impresora3D.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material televisor 4
-		// TODO
+		televisor4.setNombre("Televisor 4");
+		televisor4.setDescripcion("Dispoitivo audiovisual");
+		try {
+			materialesBean.crear(televisor4);
+			System.out.println("Se creï¿½ exitosamente el material "+ televisor4.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material pizarra electronica
-		// TODO
+		pizarraElectronica.setNombre("Pizzarra electrï¿½nica");
+		pizarraElectronica.setDescripcion("Dispoitivo diseniado para facilitar el aprendizaje");
+		try {
+			materialesBean.crear(pizarraElectronica);
+			System.out.println("Se creï¿½ exitosamente el material "+ pizarraElectronica.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material servidor BD
-		// TODO
+		servidorBD.setNombre("Servidor BD");
+		servidorBD.setDescripcion("Servidor dedicado a BBDD");
+		try {
+			materialesBean.crear(servidorBD);
+			System.out.println("Se creï¿½ exitosamente el material "+ servidorBD.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material servidor PRT
-		// TODO
+		servidorPRT.setNombre("Servidor PRT");
+		servidorPRT.setDescripcion("Servidor dedicado a PRT");
+		try {
+			materialesBean.crear(servidorPRT);
+			System.out.println("Se creï¿½ exitosamente el material "+ servidorPRT.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}		
 		
 		// Creo el Material servidor APP
-		// TODO
+		servidorAPP.setNombre("Servidor APP");
+		servidorAPP.setDescripcion("Servidor dedicado a APP");
+		try {
+			materialesBean.crear(servidorAPP);
+			System.out.println("Se creï¿½ exitosamente el material "+ servidorAPP.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// CREO LOS MATERIALES de Area Biomedicas
 		
