@@ -22,9 +22,9 @@ public class Cliente2 {
 
 	public static void main(String[] args) throws NamingException {
 		
-		AreaBeanRemote areasBean = (AreaBeanRemote) InitialContext.doLookup("Universidad/AreaBean!com.services.AreaBeanRemote");
-		MaterialBeanRemote materialBean = (MaterialBeanRemote) InitialContext.doLookup("Universidad/MaterialBean!com.services.MaterialBeanRemote");
-		SalonesBeanRemote salonesBean = (SalonesBeanRemote) InitialContext.doLookup("Universidad/SalonesBean!com.services.SalonesBeanRemote");
+		AreaBeanRemote areasBean = (AreaBeanRemote) InitialContext.doLookup("UNIVERSIDAD2/AreaBean!com.services.AreaBeanRemote");
+		MaterialBeanRemote materialBean = (MaterialBeanRemote) InitialContext.doLookup("UNIVERSIDAD2/MaterialBean!com.services.MaterialBeanRemote");
+		SalonesBeanRemote salonesBean = (SalonesBeanRemote) InitialContext.doLookup("UNIVERSIDAD2/SalonesBean!com.services.SalonesBeanRemote");
 		
 		//Creo el area LTI
 		
@@ -144,7 +144,7 @@ public class Cliente2 {
 		s1.setTipo(Tipo.LABORATORIO);
 		try {
 			salonesBean.crear(s1);
-			System.out.println("Se cre� exitosamente el salon "+ s1.getNombre());
+			System.out.println("Se cre� exitosamente el salon "+ s1.getNombre()+" "+"su numero identificador es "+s1.getId());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -159,7 +159,7 @@ public class Cliente2 {
 		s1.setTipo(Tipo.COMUN);
 		try {
 			salonesBean.crear(s2);
-			System.out.println("Se cre� exitosamente el salon "+ s2.getNombre());
+			System.out.println("Se cre� exitosamente el salon "+ s2.getNombre()+" "+"su numero identificador es "+s2.getId());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -174,7 +174,7 @@ public class Cliente2 {
 		s1.setTipo(Tipo.EXAMEN);
 		try {
 			salonesBean.crear(s3);
-			System.out.println("Se cre� exitosamente el salon "+ s3.getNombre());
+			System.out.println("Se cre� exitosamente el salon "+ s3.getNombre()+" "+"su numero identificador es "+s3.getId());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -289,7 +289,7 @@ public class Cliente2 {
 		
 		try {
 			salonesBean.crear(s4);
-			System.out.println("Se creo el nuevo salon " +s4.getNombre());
+			System.out.println("Se creo el nuevo salon " +s4.getNombre()+" "+"su numero identificador es "+s4.getId());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -305,7 +305,7 @@ public class Cliente2 {
 		
 		try {
 			salonesBean.crear(s5);
-			System.out.println("Se creo el nuevo salon " +s5.getNombre());
+			System.out.println("Se creo el nuevo salon " +s5.getNombre()+" "+"su numero identificador es "+s5.getId());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -321,11 +321,11 @@ public class Cliente2 {
 		
 		try {
 			salonesBean.crear(s6);
-			System.out.println("Se creo el nuevo salon " +s6.getNombre());
+			System.out.println("Se creo el nuevo salon " +s6.getNombre()+" "+"su numero identificador es "+s6.getId());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 
 	}
 	
