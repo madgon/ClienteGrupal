@@ -30,7 +30,7 @@ public class Cliente2 {
 		
 		Area a1 = new Area();
 		a1.setId((long) 1);
-		a1.setNombre("Área LTI");
+		a1.setNombre("ï¿½rea LTI");
 		
 		//Creo los materiales de los salones del Area LTI
 		
@@ -40,7 +40,7 @@ public class Cliente2 {
 		m1.setDescripcion("Placa con microcontrolador programable");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m1.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m1.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -51,7 +51,7 @@ public class Cliente2 {
 		m1.setDescripcion("Impresora capaz de imprimir modelos de tres dimensiones");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m2.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m2.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -62,18 +62,18 @@ public class Cliente2 {
 		m1.setDescripcion("Dispoitivo audiovisual");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m3.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m3.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		Material m4 = new Material();
 		m1.setId((long) 4);
-		m1.setNombre("Pizzarra electrónica");
+		m1.setNombre("Pizzarra electrï¿½nica");
 		m1.setDescripcion("Dispoitivo diseniado para facilitar el aprendizaje");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m4.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m4.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -84,7 +84,7 @@ public class Cliente2 {
 		m1.setDescripcion("Servidor dedicado a BBDD");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m5.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m5.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -95,7 +95,7 @@ public class Cliente2 {
 		m1.setDescripcion("Servidor dedicado a PRT");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m6.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m6.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}		
@@ -106,7 +106,7 @@ public class Cliente2 {
 		m1.setDescripcion("Servidor dedicado a APP");
 		try {
 			materialBean.crear(m1);
-			System.out.println("Se creó exitosamente el material "+ m7.getNombre());
+			System.out.println("Se creï¿½ exitosamente el material "+ m7.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -144,7 +144,7 @@ public class Cliente2 {
 		s1.setTipo(Tipo.LABORATORIO);
 		try {
 			salonesBean.crear(s1);
-			System.out.println("Se creó exitosamente el salon "+ s1.getNombre());
+			System.out.println("Se creï¿½ exitosamente el salon "+ s1.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -159,7 +159,7 @@ public class Cliente2 {
 		s1.setTipo(Tipo.COMUN);
 		try {
 			salonesBean.crear(s2);
-			System.out.println("Se creó exitosamente el salon "+ s2.getNombre());
+			System.out.println("Se creï¿½ exitosamente el salon "+ s2.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -174,12 +174,161 @@ public class Cliente2 {
 		s1.setTipo(Tipo.EXAMEN);
 		try {
 			salonesBean.crear(s3);
-			System.out.println("Se creó exitosamente el salon "+ s3.getNombre());
+			System.out.println("Se creï¿½ exitosamente el salon "+ s3.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		// Creo Area Biomedicas
+		
+		Area a2 = new Area();
+		a1.setId((long) 2);
+		a1.setNombre("ï¿½rea Biomedicas");
+		
+		//Creo los materiales para Area Biomedicas
+		
+		Material m8 = new Material();
+		m8.setId((long) 8);
+		m8.setNombre("Microscopio");
+		m8.setDescripcion("Instrumento Ã³ptico para ampliar la imagen de objetos o seres");
+		
+		try {
+			materialBean.crear(m8);
+			System.out.println("Se creo exitosamente el material "+m8.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		Material m9 = new Material();
+		m9.setId((long) 9);
+		m9.setNombre("Tijera");
+		m9.setDescripcion("Instrumento para corte con presicion de objetos como papel, tela, entre otros");
+		
+		try {
+			materialBean.crear(m9);
+			System.out.println("Se creo exitosamente el material " +m9.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		Material m10 = new Material();
+		m10.setId((long) 10);
+		m10.setNombre("Televisor 21' ");
+		m10.setDescripcion("Electrodomestico para reproduccion de videos o contenidos multimedia "+m10.getNombre());
+		
+		try {
+			materialBean.crear(m10);
+			System.out.println("Se creo exitosamente el material "+m10.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		Material m11 = new Material();
+		m11.setId((long) 11);
+		m11.setNombre("Canion");
+		m11.setDescripcion("Aparato que recibe una seÃ±al de vÃ­deo y proyecta la imagen correspondiente en una pantalla de proyecciÃ³n");
+		
+		try {
+			materialBean.crear(m11);
+			System.out.println("Se creo exitosamente el material "+m11.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		Material m12 = new Material();
+		m12.setId((long) 12);
+		m12.setNombre("Panel movil");
+		m12.setDescripcion("El panel mÃ³vil crea espacios en el mismo espacio");
+		
+		try {
+			materialBean.crear(m12);
+			System.out.println("Se creo exitosamente el material "+m12.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		} 
+		
+		Material m13 = new Material();
+		m13.setId((long) 13);
+		m13.setNombre("Mesa operaciones");
+		m13.setDescripcion("Estructura metÃ¡lica articulable en la cual se coloca al paciente que se somete a una intervenciÃ³n quirÃºrgica");
+		
+		try {
+			materialBean.crear(m13);
+			System.out.println("Se creo exitosamente el material "+m13.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		// Creo Salones de Area Biomedicas
+		
+		//Lista de materiales para S4
+		
+		List<Material> materialess4 = new ArrayList<>();
+		materialess4.add(m8);
+		materialess4.add(m9);
+				
+		//Lista de materiales para S5
+		List<Material> materialess5 = new ArrayList<>();
+		materialess5.add(m10);
+		materialess5.add(m11);
+				
+		//Lista de materiales para S6
+		List<Material> materialess6 = new ArrayList<>();
+		materialess6.add(m12);
+		materialess6.add(m13);
+				
+		
+		Salon s4 = new Salon();
+		s4.setArea(a2);
+		s4.setBandera(false);
+		s4.setCapacidadMaxima(30);
+		s4.setId((long) 4);
+		s4.setMateriales(materialess4);
+		s4.setNombre("Laboratorio 1");
+		s4.setTipo(Tipo.LABORATORIO);
+		
+		try {
+			salonesBean.crear(s4);
+			System.out.println("Se creo el nuevo salon " +s4.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		Salon s5 = new Salon();
+		s5.setArea(a2);
+		s5.setBandera(false);
+		s5.setCapacidadMaxima(30);
+		s5.setId((long) 4);
+		s5.setMateriales(materialess5);
+		s5.setNombre("Aula de clases 2");
+		s5.setTipo(Tipo.COMUN);
+		
+		try {
+			salonesBean.crear(s5);
+			System.out.println("Se creo el nuevo salon " +s5.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		Salon s6 = new Salon();
+		s6.setArea(a2);
+		s6.setBandera(false);
+		s6.setCapacidadMaxima(30);
+		s6.setId((long) 4);
+		s6.setMateriales(materialess4);
+		s6.setNombre("Deposito de materiales");
+		s6.setTipo(Tipo.COMUN);
+		
+		try {
+			salonesBean.crear(s6);
+			System.out.println("Se creo el nuevo salon " +s6.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
 		
 
 	}
+	
+	
 
 }
