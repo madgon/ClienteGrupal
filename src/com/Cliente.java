@@ -5,6 +5,7 @@ import javax.naming.NamingException;
 
 import com.entities.Area;
 import com.entities.Material;
+import com.entities.Salon;
 import com.exception.ServiciosException;
 import com.services.AreaBeanRemote;
 import com.services.MaterialBeanRemote;
@@ -85,6 +86,73 @@ public class Cliente {
 		
 		// Creo el Material servidor APP
 		// TODO
+		
+		// CREO LOS MATERIALES de Area Biomedicas
+		
+		Material microscopio = new Material();
+		Material tijeras = new Material();
+		Material televisor21 = new Material();
+		Material canion = new Material();
+		Material panelMovil = new Material();
+		Material mesaOpeaciones = new Material();
+		
+		// Creo el Material microscopio
+		// TODO
+		
+		// Creo el Material tijeras
+		// TODO
+		
+		// Creo el Material televisor 21
+		// TODO
+		
+		// Creo el Material canion
+		// TODO
+		
+		// Creo el Material panel movil
+		// TODO
+		
+		// Creo el Material mesa operaciones
+		// TODO
+		
+		// CREO LOS MATERIALES de Area IAgro
+		
+		Material maqueta1 = new Material();
+		Material maqueta2 = new Material();
+		Material televisor48 = new Material();
+		Material mesaTrabajo = new Material();
+		Material tractor = new Material();
+		Material molino = new Material();
+		
+		// Creo el Material maqueta 1
+		// TODO
+		
+		// Creo el Material maqueta 2
+		// TODO
+		
+		// Creo el Material televisor 48
+		// TODO
+		
+		// Creo el Material mesa de trabajo
+		// TODO
+		
+		// Creo el Material tractor
+		// TODO
+		
+		// Creo el Material molino
+		// TODO
+		
+		// CREO LOS SALONES de Area LTI
+		
+		Salon robotica = new Salon();
+		Salon aulaClases3 = new Salon();
+		Salon salaServidores = new Salon();
+		
+		
+		
+//		Salon robotica = new Salon();
+//		Salon robotica = new Salon();
+//		Salon robotica = new Salon();
+//		Salon robotica = new Salon();
 		
 		
 	}
