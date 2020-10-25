@@ -332,12 +332,42 @@ public class Cliente {
 		// TODO
 		
 		
-		// ASIGNO AL AREA CADA SALON
+		// ASIGNO LOS MATERIALES A CADA SALON
 		
-		salonesBean.asignarArea(
-				salonesBean.obtenerUno(""),
-				areasBean.leerTodosFiltro("LTI").get(0).getId()
-				);
+		// Asigno los materiales a Robotica
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Robotica").get(0).getId(),
+					materialesBean.obtenerTodos("Placa Arduino").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Robotica").get(0).getId(),
+					materialesBean.obtenerTodos("Impresora 3D").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		// Asigno los materiales a Aula de clases 3
+		
+		// Asigno los materiales a Sala de Servidores
+		
+		// Asigno los materiales a Laboratorio 1
+		
+		// Asigno los materiales a Aula de clases 2
+		
+		// Asigno los materiales a Deposito de materiales
+		
+		// Asigno los materiales a Laboratorio 2
+		
+		// Asigno los materiales a Aula de clases de 1
+		
+		// Asigno los materiales a Galpon de materiales
 		
 		
 	}
