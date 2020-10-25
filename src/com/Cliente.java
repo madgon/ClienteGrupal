@@ -29,7 +29,7 @@ public class Cliente {
 		Area areaBiomedicas = new Area();
 		Area areaIAgro = new Area();
 		
-		// Creo el Area IAgro
+		// Creo el Area LTI
 		areaLTI.setNombre("LTI");
 		try {
 			areasBean.crear(areaLTI);
@@ -38,7 +38,7 @@ public class Cliente {
 			System.out.println(e.getMessage());
 		}
 		
-		// Creo el Area IAgro
+		// Creo el Area Biomedicas
 		areaBiomedicas.setNombre("Biomedicas");
 		try {
 			areasBean.crear(areaBiomedicas);
@@ -98,7 +98,7 @@ public class Cliente {
 		}
 		
 		// Creo el Material pizarra electronica
-		pizarraElectronica.setNombre("Pizzarra electronica");
+		pizarraElectronica.setNombre("Pizarra electronica");
 		pizarraElectronica.setDescripcion("Dispoitivo diseniado para facilitar el aprendizaje");
 		try {
 			materialesBean.crear(pizarraElectronica);
@@ -294,11 +294,14 @@ public class Cliente {
 		Salon salaServidores = new Salon();
 		
 		// Creo el salon robotica
+		Long id = areasBean.leerTodosFiltro("LTI").get(0).getId();
+		System.out.println(id);
 		try {
-			salonesBean.crear("Robotica", areasBean.leerTodosFiltro("LTI").get(0).getId());
+			salonesBean.crear("Robotica", id);
+			System.out.println("Se creo exitosamente el salon "+ salonesBean.obtenerUno("Robotica").get(0).getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
-		}//
+		}
 		
 		// Creo el salon aulaClases3
 		try {
@@ -377,10 +380,9 @@ public class Cliente {
 		
 		// Asigno los materiales a Robotica
 		try {
-			salonesBean.asignarMaterial(
-					salonesBean.obtenerUno("Robotica").get(0).getId(),
-					materialesBean.obtenerTodos("Placa Arduino").get(0).getId()
-					);
+			Long idsalon = salonesBean.obtenerUno("Robotica").get(0).getId();
+			Long idmaterial = materialesBean.obtenerTodos("Placa Arduino").get(0).getId();
+			salonesBean.asignarMaterial(idsalon, idmaterial);
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -388,7 +390,7 @@ public class Cliente {
 		try {
 			salonesBean.asignarMaterial(
 					salonesBean.obtenerUno("Robotica").get(0).getId(),
-					materialesBean.obtenerTodos("Televisor 4").get(0).getId()
+					materialesBean.obtenerTodos("Impresora 3D").get(0).getId()
 					);
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
@@ -398,7 +400,7 @@ public class Cliente {
 		try {
 			salonesBean.asignarMaterial(
 					salonesBean.obtenerUno("Aula Clases 3").get(0).getId(),
-					materialesBean.obtenerTodos("Pizarra electronica").get(0).getId()
+					materialesBean.obtenerTodos("Televisor 4").get(0).getId()
 					);
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
@@ -453,7 +455,7 @@ public class Cliente {
 		try {
 			salonesBean.asignarMaterial(
 					salonesBean.obtenerUno("Laboratorio 1").get(0).getId(),
-					materialesBean.obtenerTodos("Tijeras").get(0).getId()
+					materialesBean.obtenerTodos("Tijera").get(0).getId()
 					);
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
@@ -553,6 +555,17 @@ public class Cliente {
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		// Modificar salon Robotica
+				System.out.println(id);
+				try {
+					Salon salon = salonesBean.obtenerUno("Robotica").get(0);
+					salon.setNombre("Robotica 2");
+					salonesBean.actualizar(salon);
+					System.out.println("Se modifico exitosamente el salon "+ salonesBean.obtenerUno("Robotica 2").get(0).getNombre());
+				} catch (ServiciosException e) {
+					System.out.println(e.getMessage());
+				}
 		
 	}
 
