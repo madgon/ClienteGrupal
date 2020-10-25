@@ -292,11 +292,29 @@ public class Cliente {
 		Salon aulaClases3 = new Salon();
 		Salon salaServidores = new Salon();
 		
+		// Creo el salon robotica
+		// TODO
+		
+		// Creo el salon aulaClases3
+		// TODO
+		
+		// Creo el salon salaServidores
+		// TODO
+		
 		// CREO LOS SALONES de Area Biomedicas
 		
 		Salon laboratorio1 = new Salon();
 		Salon aulaClases2 = new Salon();
 		Salon depositoMateriales = new Salon();
+		
+		// Creo el salon laboratorio1
+		// TODO
+		
+		// Creo el salon aulaClases2
+		// TODO
+		
+		// Creo el salon depositoMateriales
+		// TODO
 
 		// CREO LOS SALONES de Area IAgro
 		
@@ -304,9 +322,22 @@ public class Cliente {
 		Salon aulaClases1 = new Salon();
 		Salon galponMateriales = new Salon();
 		
+		// Creo el salon laboratorio2
+		// TODO
+		
+		// Creo el salon aulaClases1
+		// TODO
+		
+		// Creo el salon galponMateriales
+		// TODO
+		
+		
 		// ASIGNO AL AREA CADA SALON
 		
-//		salonesBean.asignarArea(idSalon, areasBean.leerTodosFiltro("LTI").get(0).getId());
+		salonesBean.asignarArea(
+				salonesBean.obtenerUno(""),
+				areasBean.leerTodosFiltro("LTI").get(0).getId()
+				);
 		
 		
 	}
