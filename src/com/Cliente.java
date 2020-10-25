@@ -32,7 +32,7 @@ public class Cliente {
 		areaLTI.setNombre("LTI");
 		try {
 			areasBean.crear(areaLTI);
-			System.out.println("Se cre� exitosamente el area");
+			System.out.println("Se crea exitosamente el area");
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -41,7 +41,7 @@ public class Cliente {
 		areaBiomedicas.setNombre("Biomedicas");
 		try {
 			areasBean.crear(areaBiomedicas);
-			System.out.println("Se cre� exitosamente el area");
+			System.out.println("Se crea exitosamente el area");
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -50,7 +50,7 @@ public class Cliente {
 		areaIAgro.setNombre("IAgro");
 		try {
 			areasBean.crear(areaIAgro);
-			System.out.println("Se cre� exitosamente el area");
+			System.out.println("Se crea exitosamente el area");
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -196,12 +196,21 @@ public class Cliente {
 		Salon aulaClases3 = new Salon();
 		Salon salaServidores = new Salon();
 		
+		// CREO LOS SALONES de Area Biomedicas
 		
+		Salon laboratorio1 = new Salon();
+		Salon aulaClases2 = new Salon();
+		Salon depositoMateriales = new Salon();
+
+		// CREO LOS SALONES de Area IAgro
 		
-//		Salon robotica = new Salon();
-//		Salon robotica = new Salon();
-//		Salon robotica = new Salon();
-//		Salon robotica = new Salon();
+		Salon laboratorio2 = new Salon();
+		Salon aulaClases1 = new Salon();
+		Salon galponMateriales = new Salon();
+		
+		// ASIGNO AL AREA CADA SALON
+		
+//		salonesBean.asignarArea(idSalon, areasBean.leerTodosFiltro("LTI").get(0).getId());
 		
 		
 	}
