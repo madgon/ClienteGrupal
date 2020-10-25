@@ -202,7 +202,7 @@ public class Cliente {
 		} 
 		
 		// Creo el Material mesa operaciones
-		mesaOperaciones.setNombre("Mesa operaciones");
+		mesaOperaciones.setNombre("Mesa de Operaciones");
 		mesaOperaciones.setDescripcion("Estructura metálica articulable en la cual se coloca al paciente que se somete a una intervención quirúrgica");
 		
 		try {
@@ -255,7 +255,7 @@ public class Cliente {
 		}
 		
 		// Creo el Material mesa de trabajo
-		mesaTrabajo.setNombre("Televisor de 48' ");
+		mesaTrabajo.setNombre("Mesa de Trabajo");
 		mesaTrabajo.setDescripcion("Objeto plano en donde se colocan documentos, etc");
 		
 		try {
@@ -294,14 +294,26 @@ public class Cliente {
 		Salon salaServidores = new Salon();
 		
 		// Creo el salon robotica
-		salonesBean.crear("Robotica", areasBean.leerTodosFiltro("LTI").get(0).getId());//
+		try {
+			salonesBean.crear("Robotica", areasBean.leerTodosFiltro("LTI").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}//
 		
 		// Creo el salon aulaClases3
-		salonesBean.crear("Aula Clases 3", areasBean.leerTodosFiltro("LTI").get(0).getId());
+		try {
+			salonesBean.crear("Aula Clases 3", areasBean.leerTodosFiltro("LTI").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		
 		// Creo el salon salaServidores
-		salonesBean.crear("Sala Servidores", areasBean.leerTodosFiltro("LTI").get(0).getId());
+		try {
+			salonesBean.crear("Sala Servidores", areasBean.leerTodosFiltro("LTI").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// CREO LOS SALONES de Area Biomedicas
 		
@@ -310,13 +322,25 @@ public class Cliente {
 		Salon depositoMateriales = new Salon();
 		
 		// Creo el salon laboratorio1
-		salonesBean.crear("Laboratorio 1", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		try {
+			salonesBean.crear("Laboratorio 1", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el salon aulaClases2
-		salonesBean.crear("Aula Clases 2", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		try {
+			salonesBean.crear("Aula Clases 2", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el salon depositoMateriales
-		salonesBean.crear("Deposito Materiales", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		try {
+			salonesBean.crear("Deposito Materiales", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 
 		// CREO LOS SALONES de Area IAgro
@@ -326,14 +350,27 @@ public class Cliente {
 		Salon galponMateriales = new Salon();
 		
 		// Creo el salon laboratorio2
-		salonesBean.crear("Laboratorio 2", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		try {
+			salonesBean.crear("Laboratorio 2", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		} catch (ServiciosException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		
 		// Creo el salon aulaClases1
-		salonesBean.crear("Aula Clases", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		try {
+			salonesBean.crear("Aula Clases", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el salon galponMateriales
-		salonesBean.crear("Galpon Materiales", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		try {
+			salonesBean.crear("Galpon Materiales", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		
 		// ASIGNO LOS MATERIALES A CADA SALON
@@ -366,10 +403,61 @@ public class Cliente {
 		// Asigno los materiales a Aula de clases 2
 		
 		// Asigno los materiales a Deposito de materiales
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Deposito Materiales").get(0).getId(),
+					materialesBean.obtenerTodos("Panel movil").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Deposito Materiales").get(0).getId(),
+					materialesBean.obtenerTodos("Mesa de Operaciones").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Asigno los materiales a Laboratorio 2
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Laboratorio 2").get(0).getId(),
+					materialesBean.obtenerTodos("Maqueta 1").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Laboratorio 2").get(0).getId(),
+					materialesBean.obtenerTodos("Maqueta 2").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Asigno los materiales a Aula de clases de 1
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Aula Clases 1").get(0).getId(),
+					materialesBean.obtenerTodos("Televisor de 48").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Aula Clases 1").get(0).getId(),
+					materialesBean.obtenerTodos("Mesa de Trabajo").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Asigno los materiales a Galpon de materiales
 		
