@@ -143,25 +143,73 @@ public class Cliente {
 		Material televisor21 = new Material();
 		Material canion = new Material();
 		Material panelMovil = new Material();
-		Material mesaOpeaciones = new Material();
+		Material mesaOperaciones = new Material();
 		
 		// Creo el Material microscopio
-		// TODO
+		microscopio.setNombre("Microscopio");
+		microscopio.setDescripcion("Instrumento óptico para ampliar la imagen de objetos o seres");
+		
+		try {
+			materialesBean.crear(microscopio);
+			System.out.println("Se creo exitosamente el material "+microscopio.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material tijeras
-		// TODO
+		tijeras.setNombre("Tijera");
+		tijeras.setDescripcion("Instrumento para corte con presicion de objetos como papel, tela, entre otros");
+		
+		try {
+			materialesBean.crear(tijeras);
+			System.out.println("Se creo exitosamente el material " +tijeras.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material televisor 21
-		// TODO
+		televisor21.setNombre("Televisor 21' ");
+		televisor21.setDescripcion("Electrodomestico para reproduccion de videos o contenidos multimedia "+televisor21.getNombre());
+		
+		try {
+			materialesBean.crear(televisor21);
+			System.out.println("Se creo exitosamente el material "+televisor21.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material canion
-		// TODO
+		canion.setNombre("Canion");
+		canion.setDescripcion("Aparato que recibe una señal de vídeo y proyecta la imagen correspondiente en una pantalla de proyección");
+		
+		try {
+			materialesBean.crear(canion);
+			System.out.println("Se creo exitosamente el material "+canion.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material panel movil
-		// TODO
+		panelMovil.setNombre("Panel movil");
+		panelMovil.setDescripcion("El panel móvil crea espacios en el mismo espacio");
+		
+		try {
+			materialesBean.crear(panelMovil);
+			System.out.println("Se creo exitosamente el material "+panelMovil.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		} 
 		
 		// Creo el Material mesa operaciones
-		// TODO
+		mesaOperaciones.setNombre("Mesa operaciones");
+		mesaOperaciones.setDescripcion("Estructura metálica articulable en la cual se coloca al paciente que se somete a una intervención quirúrgica");
+		
+		try {
+			materialesBean.crear(mesaOperaciones);
+			System.out.println("Se creo exitosamente el material "+mesaOperaciones.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// CREO LOS MATERIALES de Area IAgro
 		
@@ -173,22 +221,70 @@ public class Cliente {
 		Material molino = new Material();
 		
 		// Creo el Material maqueta 1
-		// TODO
+		maqueta1.setNombre("Maqueta 1");
+		maqueta1.setDescripcion("Composición de una página o de una publicación en la que se distribuyen los distintos elementos");
+		
+		try {
+			materialesBean.crear(maqueta1);
+			System.out.println("Se creo exitosamente el material "+maqueta1.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material maqueta 2
-		// TODO
+		maqueta2.setNombre("Maqueta 2");
+		maqueta1.setDescripcion("Composición de una página o de una publicación en la que se distribuyen los distintos elementos");
+		
+		try {
+			materialesBean.crear(maqueta2);
+			System.out.println("Se creo exitosamente el material "+maqueta2.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material televisor 48
-		// TODO
+		televisor48.setNombre("Televisor de 48' ");
+		televisor48.setDescripcion("Electrodomestico para reproduccion de videos o contenidos multimedia");
+		
+		try {
+			materialesBean.crear(televisor48);
+			System.out.println("Se creo exitosamente el material "+televisor48.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material mesa de trabajo
-		// TODO
+		mesaTrabajo.setNombre("Televisor de 48' ");
+		mesaTrabajo.setDescripcion("Objeto plano en donde se colocan documentos, etc");
+		
+		try {
+			materialesBean.crear(mesaTrabajo);
+			System.out.println("Se creo exitosamente el material "+mesaTrabajo.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material tractor
-		// TODO
+		tractor.setNombre("Tractor");
+		tractor.setDescripcion("Maquinaria vial");
+		
+		try {
+			materialesBean.crear(tractor);
+			System.out.println("Se creo exitosamente el material "+tractor.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// Creo el Material molino
-		// TODO
+		molino.setNombre("Molino");
+		molino.setDescripcion("Objeto de trituracion de materiales");
+		
+		try {
+			materialesBean.crear(molino);
+			System.out.println("Se creo exitosamente el material "+molino.getNombre());
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		// CREO LOS SALONES de Area LTI
 		
