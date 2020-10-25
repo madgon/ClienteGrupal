@@ -7,6 +7,7 @@ import com.entities.Area;
 import com.entities.Material;
 import com.entities.Salon;
 import com.exception.ServiciosException;
+import com.services.AreaBean;
 import com.services.AreaBeanRemote;
 import com.services.MaterialBeanRemote;
 import com.services.SalonesBeanRemote;
@@ -293,13 +294,14 @@ public class Cliente {
 		Salon salaServidores = new Salon();
 		
 		// Creo el salon robotica
-		// TODO
+		salonesBean.crear("Robotica", areasBean.leerTodosFiltro("LTI").get(0).getId());//
 		
 		// Creo el salon aulaClases3
-		// TODO
+		salonesBean.crear("Aula Clases 3", areasBean.leerTodosFiltro("LTI").get(0).getId());
+		
 		
 		// Creo el salon salaServidores
-		// TODO
+		salonesBean.crear("Sala Servidores", areasBean.leerTodosFiltro("LTI").get(0).getId());
 		
 		// CREO LOS SALONES de Area Biomedicas
 		
@@ -308,13 +310,14 @@ public class Cliente {
 		Salon depositoMateriales = new Salon();
 		
 		// Creo el salon laboratorio1
-		// TODO
+		salonesBean.crear("Laboratorio 1", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
 		
 		// Creo el salon aulaClases2
-		// TODO
+		salonesBean.crear("Aula Clases 2", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
 		
 		// Creo el salon depositoMateriales
-		// TODO
+		salonesBean.crear("Deposito Materiales", areasBean.leerTodosFiltro("Biomedicas").get(0).getId());
+		
 
 		// CREO LOS SALONES de Area IAgro
 		
@@ -323,13 +326,14 @@ public class Cliente {
 		Salon galponMateriales = new Salon();
 		
 		// Creo el salon laboratorio2
-		// TODO
+		salonesBean.crear("Laboratorio 2", areasBean.leerTodosFiltro("IAgro").get(0).getId());
+		
 		
 		// Creo el salon aulaClases1
-		// TODO
+		salonesBean.crear("Aula Clases", areasBean.leerTodosFiltro("IAgro").get(0).getId());
 		
 		// Creo el salon galponMateriales
-		// TODO
+		salonesBean.crear("Galpon Materiales", areasBean.leerTodosFiltro("IAgro").get(0).getId());
 		
 		
 		// ASIGNO AL AREA CADA SALON
