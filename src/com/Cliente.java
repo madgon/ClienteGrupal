@@ -1,5 +1,7 @@
 package com;
 
+import java.util.List;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -555,17 +557,27 @@ public class Cliente {
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
+
+		for(Salon salon: salonesBean.obtenerTodos()) {
+			System.out.println("Salon: " + salon.getNombre());
+			System.out.println("Lista de materiales");
+			System.out.println("===== == ==========");
+			for(Material material: salon.getMateriales()) {
+				System.out.println("Material: " + material.getNombre());
+			}
+			System.out.println("--------------------------");
+		}
 		
 		// Modificar salon Robotica
-				System.out.println(id);
-				try {
-					Salon salon = salonesBean.obtenerUno("Robotica").get(0);
-					salon.setNombre("Robotica 2");
-					salonesBean.actualizar(salon);
-					System.out.println("Se modifico exitosamente el salon "+ salonesBean.obtenerUno("Robotica 2").get(0).getNombre());
-				} catch (ServiciosException e) {
-					System.out.println(e.getMessage());
-				}
+//		System.out.println(id);
+//		try {
+//			Salon salon = salonesBean.obtenerUno("Robotica").get(0);
+//			salon.setNombre("Robotica 2");
+//			salonesBean.actualizar(salon);
+//			System.out.println("Se modifico exitosamente el salon "+ salonesBean.obtenerUno("Robotica 2").get(0).getNombre());
+//		} catch (ServiciosException e) {
+//			System.out.println(e.getMessage());
+//		}
 		
 	}
 
