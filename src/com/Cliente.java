@@ -536,7 +536,23 @@ public class Cliente {
 		}
 		
 		// Asigno los materiales a Galpon de materiales
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Galpon Materiales").get(0).getId(),
+					materialesBean.obtenerTodos("Tractor").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
+		try {
+			salonesBean.asignarMaterial(
+					salonesBean.obtenerUno("Galpon Materiales").get(0).getId(),
+					materialesBean.obtenerTodos("Molino").get(0).getId()
+					);
+		} catch (ServiciosException e) {
+			System.out.println(e.getMessage());
+		}
 		
 	}
 
