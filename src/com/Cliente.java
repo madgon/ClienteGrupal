@@ -98,11 +98,11 @@ public class Cliente {
 		}
 		
 		// Creo el Material pizarra electronica
-		pizarraElectronica.setNombre("Pizzarra electr�nica");
+		pizarraElectronica.setNombre("Pizzarra electronica");
 		pizarraElectronica.setDescripcion("Dispoitivo diseniado para facilitar el aprendizaje");
 		try {
 			materialesBean.crear(pizarraElectronica);
-			System.out.println("Se cre� exitosamente el material "+ pizarraElectronica.getNombre());
+			System.out.println("Se creo exitosamente el material "+ pizarraElectronica.getNombre());
 		} catch (ServiciosException e) {
 			System.out.println(e.getMessage());
 		}
@@ -169,7 +169,7 @@ public class Cliente {
 		}
 		
 		// Creo el Material televisor 21
-		televisor21.setNombre("Televisor 21' ");
+		televisor21.setNombre("Televisor 21");
 		televisor21.setDescripcion("Electrodomestico para reproduccion de videos o contenidos multimedia "+televisor21.getNombre());
 		
 		try {
@@ -244,7 +244,7 @@ public class Cliente {
 		}
 		
 		// Creo el Material televisor 48
-		televisor48.setNombre("Televisor de 48' ");
+		televisor48.setNombre("Televisor de 48");
 		televisor48.setDescripcion("Electrodomestico para reproduccion de videos o contenidos multimedia");
 		
 		try {
@@ -255,7 +255,7 @@ public class Cliente {
 		}
 		
 		// Creo el Material mesa de trabajo
-		mesaTrabajo.setNombre("Televisor de 48' ");
+		mesaTrabajo.setNombre("Televisor de 48");
 		mesaTrabajo.setDescripcion("Objeto plano en donde se colocan documentos, etc");
 		
 		try {
@@ -358,6 +358,7 @@ public class Cliente {
 		}
 		
 		// Asigno los materiales a Aula de clases 3
+		salonesBean.asignarMaterial("", idMaterial);
 		
 		// Asigno los materiales a Sala de Servidores
 		
